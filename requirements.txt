@@ -1,0 +1,3 @@
+# Dependencias del proyecto Yoshi's Battle
+# Interfaz grafica (version moderna de pygame, igual que en AgroBot)
+pygame-ce>=2.5
