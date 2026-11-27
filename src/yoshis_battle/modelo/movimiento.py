@@ -23,7 +23,7 @@ Decisiones de equipo:
 """
 from __future__ import annotations
 
-from .. import constantes  # noqa: F401  (se usa al implementar)
+from .. import constantes
 from .estado import Casilla
 
 SALTOS_CABALLO = (
@@ -34,9 +34,17 @@ SALTOS_CABALLO = (
 
 def dentro_del_tablero(casilla: Casilla) -> bool:
     """Verdadero si `casilla` esta entre (0, 0) y (TAMANO_TABLERO-1, TAMANO_TABLERO-1)."""
-    raise NotImplementedError("PENDIENTE: modelo/movimiento.py dentro_del_tablero")
+    fila, columna = casilla
+    return (0 <= fila < constantes.TAMANO_TABLERO
+            and 0 <= columna < constantes.TAMANO_TABLERO)
 
 
 def saltos_desde(casilla: Casilla) -> list[Casilla]:
     """Casillas alcanzables con un salto de caballo desde `casilla`, dentro del tablero."""
-    raise NotImplementedError("PENDIENTE: modelo/movimiento.py saltos_desde")
+    fila, columna = casilla
+    destinos = []
+    for df, dc in SALTOS_CABALLO:
+        destino = (fila + df, columna + dc)
+        if dentro_del_tablero(destino):
+            destinos.append(destino)
+    return destinos

@@ -50,17 +50,28 @@ class Estado:
 
     def posicion_de(self, jugador: str) -> Casilla:
         """Casilla donde esta el Yoshi de `jugador`."""
-        raise NotImplementedError("PENDIENTE: modelo/estado.py posicion_de")
+        if jugador == constantes.VERDE:
+            return self.pos_verde
+        if jugador == constantes.ROJO:
+            return self.pos_rojo
+        raise ValueError(f"Jugador desconocido: {jugador!r}")
 
     def valor_moneda_en(self, casilla: Casilla) -> int:
         """Valor de la moneda en `casilla`, o 0 si no hay moneda."""
-        raise NotImplementedError("PENDIENTE: modelo/estado.py valor_moneda_en")
+        for posicion, valor in self.monedas:
+            if posicion == casilla:
+                return valor
+        return 0
 
     def quedan_monedas(self) -> bool:
         """Verdadero si todavia hay al menos una moneda en el tablero."""
-        raise NotImplementedError("PENDIENTE: modelo/estado.py quedan_monedas")
+        return len(self.monedas) > 0
 
     @staticmethod
     def rival(jugador: str) -> str:
         """El otro jugador: VERDE <-> ROJO."""
-        raise NotImplementedError("PENDIENTE: modelo/estado.py rival")
+        if jugador == constantes.VERDE:
+            return constantes.ROJO
+        if jugador == constantes.ROJO:
+            return constantes.VERDE
+        raise ValueError(f"Jugador desconocido: {jugador!r}")
