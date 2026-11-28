@@ -1,0 +1,490 @@
+{
+    "actorName": "COIN_SMALL",
+    "imageFile": "COIN_SMALL.gtx",
+    "animations": [
+        {
+            "animName": "idle",
+            "cells": [
+                {
+                    "cellName": "coin_small",
+                    "looping": true,
+                    "loopback": 0,
+                    "size": { "x": 32, "y": 32 },
+                    "pivot": { "x": 0, "y": 0 },
+                    "frames": [
+                        {
+                            "image": 0,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 1,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 2,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 3,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 4,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 5,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 6,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 7,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 8,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 9,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 10,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 11,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 12,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 13,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 14,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 15,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 16,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 17,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 18,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 19,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 20,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 21,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 22,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 23,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 24,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 25,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 26,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 27,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 28,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 29,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        }
+                    ],
+                    "imageTable": [
+                        { "x": 1, "y": 1 },
+                        { "x": 37, "y": 1 },
+                        { "x": 73, "y": 1 },
+                        { "x": 109, "y": 1 },
+                        { "x": 145, "y": 1 },
+                        { "x": 181, "y": 1 },
+                        { "x": 1, "y": 37 },
+                        { "x": 37, "y": 37 },
+                        { "x": 73, "y": 37 },
+                        { "x": 109, "y": 37 },
+                        { "x": 145, "y": 37 },
+                        { "x": 181, "y": 37 },
+                        { "x": 1, "y": 73 },
+                        { "x": 37, "y": 73 },
+                        { "x": 73, "y": 73 },
+                        { "x": 109, "y": 73 },
+                        { "x": 145, "y": 73 },
+                        { "x": 181, "y": 73 },
+                        { "x": 1, "y": 109 },
+                        { "x": 37, "y": 109 },
+                        { "x": 73, "y": 109 },
+                        { "x": 109, "y": 109 },
+                        { "x": 145, "y": 109 },
+                        { "x": 181, "y": 109 },
+                        { "x": 1, "y": 145 },
+                        { "x": 37, "y": 145 },
+                        { "x": 73, "y": 145 },
+                        { "x": 109, "y": 145 },
+                        { "x": 145, "y": 145 },
+                        { "x": 181, "y": 145 }
+                    ]
+                }
+            ]
+        },
+        {
+            "animName": "get",
+            "cells": [
+                {
+                    "cellName": "coin_small",
+                    "looping": false,
+                    "loopback": 0,
+                    "size": { "x": 32, "y": 32 },
+                    "pivot": { "x": 0, "y": 0 },
+                    "frames": [
+                        {
+                            "image": 0,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": 0 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 1
+                        },
+                        {
+                            "image": 1,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -9 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.9333333
+                        },
+                        {
+                            "image": 2,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -17 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.8705882
+                        },
+                        {
+                            "image": 3,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -26 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.8039216
+                        },
+                        {
+                            "image": 4,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -34 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.7372549
+                        },
+                        {
+                            "image": 5,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -43 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.6745098
+                        },
+                        {
+                            "image": 6,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -51 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.6078432
+                        },
+                        {
+                            "image": 7,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -60 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.5411765
+                        },
+                        {
+                            "image": 0,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -68 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.4784314
+                        },
+                        {
+                            "image": 1,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -77 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.4117647
+                        },
+                        {
+                            "image": 2,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -85 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.345098
+                        },
+                        {
+                            "image": 3,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -94 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.282353
+                        },
+                        {
+                            "image": 4,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -102 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.2156863
+                        },
+                        {
+                            "image": 5,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -111 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.1490196
+                        },
+                        {
+                            "image": 6,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -119 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.08627451
+                        },
+                        {
+                            "image": 7,
+                            "delay": 1,
+                            "pos": { "x": 0, "y": -128 },
+                            "scale": { "x": 1, "y": 1 },
+                            "rotation": 0,
+                            "color": null,
+                            "alpha": 0.01960784
+                        }
+                    ],
+                    "imageTable": [
+                        { "x": 1, "y": 1 },
+                        { "x": 145, "y": 1 },
+                        { "x": 73, "y": 37 },
+                        { "x": 1, "y": 73 },
+                        { "x": 181, "y": 73 },
+                        { "x": 109, "y": 109 },
+                        { "x": 37, "y": 145 },
+                        { "x": 181, "y": 145 }
+                    ]
+                }
+            ]
+        }
+    ]
+}
