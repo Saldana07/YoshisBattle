@@ -58,6 +58,19 @@ python -m unittest discover -s tests -v
 Las tipografias Pixelify Sans y DM Sans van en `src/yoshis_battle/gui/fuentes/`, siguiendo
 el `LEEME.md` de esa carpeta (son las mismas de AgroBot).
 
+### Demo de la interfaz
+
+Mientras se terminan minimax, el controlador y las pantallas, la parte visual se puede
+probar con:
+
+```
+python demo_interfaz.py            (o: python demo_interfaz.py experto)
+```
+
+Clic en una casilla resaltada para mover el Yoshi rojo, `R` para un tablero nuevo, `M`
+para silenciar y `Esc` para salir. En el demo la maquina **no** usa minimax: toma la
+moneda mas valiosa a un salto o salta al azar. No hace parte del juego final.
+
 ## Arbol de carpetas
 
 ```
@@ -66,12 +79,14 @@ YoshisBattle/
 ├── LICENSE
 ├── requirements.txt
 ├── ejecutar.py                 (lanzador desde la raiz)
+├── demo_interfaz.py            (demo de la parte visual; la maquina no usa minimax)
 ├── docs/
 │   ├── Proyecto2.pdf           (enunciado)
 │   └── informe/                (informe: definicion y explicacion de la heuristica)
 ├── assets/
-│   ├── README.md               (sprites esperados, formato y tamano)
-│   └── sprites/{tablero,yoshi,moneda}/
+│   ├── README.md               (que se usa de cada asset y creditos)
+│   ├── sprites/{tablero,yoshi,moneda,font}/
+│   └── sonidos/                (musica de fondo y sonido de la moneda)
 ├── src/yoshis_battle/
 │   ├── __init__.py
 │   ├── main.py                 (punto de entrada; une todo)
@@ -89,10 +104,11 @@ YoshisBattle/
 │   │   └── partida.py          (turnos maquina/humano, fin de partida)
 │   └── gui/
 │       ├── estilo.py           (ventana, paleta, fuentes)
-│       ├── cargador_sprites.py (unico archivo que lee assets/sprites/)
+│       ├── cargador_sprites.py (unico archivo que lee assets/: sprites, fuente y audio)
+│       ├── sonido.py           (musica en bucle y sonido de la moneda)
 │       ├── pantalla_inicio.py  (bienvenida y eleccion de nivel)
-│       ├── panel_tablero.py    (tablero, monedas, Yoshis, casillas resaltadas)
-│       ├── panel_marcador.py   (puntos de cada jugador y turno)
+│       ├── panel_tablero.py    (tablero, monedas, Yoshis animados, casillas resaltadas)
+│       ├── panel_marcador.py   (puntos de cada jugador, turno y ultima decision de la IA)
 │       ├── ventana_juego.py    (bucle de eventos de una partida)
 │       ├── pantalla_final.py   (ganador y jugar de nuevo)
 │       └── fuentes/LEEME.md
@@ -103,7 +119,8 @@ YoshisBattle/
     ├── test_reglas.py
     ├── test_heuristica.py
     ├── test_minimax.py
-    └── test_partida.py
+    ├── test_partida.py
+    └── test_gui_tablero.py     (sprites, animaciones, clic -> casilla y sonido; sin ventana)
 ```
 
 ## Regla de dependencias
@@ -120,7 +137,7 @@ constantes <- modelo <- juego <- ia <- controlador <- gui <- main
 - `ia/` importa de `juego/`, `modelo/` y `constantes`; nunca de `controlador/` ni `gui/`.
 - `controlador/` importa de `ia/`, `juego/`, `modelo/` y `constantes`; no conoce pygame.
 - `gui/` puede importar de todo lo anterior; dentro de `gui/` solo `cargador_sprites.py`
-  lee `assets/sprites/`.
+  lee `assets/` (sprites, fuente de titulos y audio).
 - `main.py` es el unico que une todo (composicion). Nada importa de `gui/` excepto
   `main.py` y los propios archivos de `gui/`.
 
@@ -138,6 +155,36 @@ constantes <- modelo <- juego <- ia <- controlador <- gui <- main
 | `jugar_partida(pantalla, partida)` | `gui/ventana_juego.py` | ventana, `Partida` | `"terminada"`, `"volver"` o `"salir"` |
 
 `Casilla` = `(fila, columna)` con indices 0..7; `(0, 0)` es la esquina superior izquierda.
+
+### Como usar los paneles en `ventana_juego.py`
+
+`PanelTablero` y `PanelMarcador` ya estan listos (ver la cabecera de cada archivo). El
+bucle de una partida queda asi (`demo_interfaz.py` lo hace igual, con una jugada de
+prueba en lugar de `Partida`):
+
+```python
+tablero = PanelTablero(estilo.RECT_TABLERO)
+marcador = PanelMarcador(estilo.RECT_MARCADOR)
+while ...:
+    animando = tablero.animando()           # True mientras un Yoshi va saltando
+    if not animando and partida.turno_de_maquina() and not partida.terminada():
+        decision = partida.jugar_maquina()  # pintar "pensando" un cuadro antes
+    resaltadas = [] if animando else partida.movimientos_humano()
+    # en un clic: destino = tablero.casilla_en(evento.pos)
+    #             if not animando and destino in resaltadas: partida.jugar_humano(destino)
+    tablero.dibujar(pantalla, partida.estado, resaltadas, ultima_jugada=(origen, destino),
+                    casilla_hover=tablero.casilla_en(pygame.mouse.get_pos()))
+    marcador.dibujar(pantalla, partida.estado, partida.nivel, pensando, decision)
+    pygame.display.flip(); reloj.tick(60)
+```
+
+- Hay que llamar a `dibujar` en **cada** cuadro: asi avanzan las animaciones (salto,
+  monedas girando, Yoshi que espera, ganador que celebra).
+- El tablero detecta solo las jugadas comparando estados, toca el sonido de la moneda al
+  aterrizar y maneja la musica (empieza con la partida y se apaga al terminar).
+- Para una partida nueva: `tablero.reiniciar()` (tambien se detecta solo).
+- Para pantalla_final: `cargar_animaciones_yoshi(tamano)["yoshi_verde"]["celebrar"]` da
+  los cuadros del Yoshi celebrando.
 
 ## Decisiones del equipo
 
@@ -157,7 +204,7 @@ Pendientes:
 - [ ] Terminos y pesos de la heuristica (`ia/heuristica.py`), con su justificacion para
       el informe.
 - [ ] Si minimax en experto se corre en un hilo para no congelar la ventana.
-- [ ] Sprites propios (`assets/README.md`) y paleta (`gui/estilo.py`).
+- [x] Sprites (`assets/README.md`), paleta (`gui/estilo.py`), animaciones y sonido.
 
 ## Flujo de trabajo con Git
 
